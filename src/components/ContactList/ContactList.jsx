@@ -1,8 +1,9 @@
 import ContactListItem from './ContactListItem/ContactListItem';
+import styles from './ContactList.module.css';
 
 export default function ContactList({ contacts, onDelete }) {
   return (
-    <ul>
+    <ul className={styles.contactList}>
       {contacts.map(({ id, name, number }) => (
         <ContactListItem
           key={id}
