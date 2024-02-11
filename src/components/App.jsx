@@ -24,9 +24,8 @@ export class App extends Component {
       return;
     }
 
-    const id = nanoid();
     this.setState({
-      contacts: [{ name, number, id }, ...contacts],
+      contacts: [{ name, number, id: nanoid() }, ...contacts],
       filter: '',
     });
   };
